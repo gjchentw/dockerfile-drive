@@ -15,4 +15,4 @@ RUN mkdir -p /opt/drive
 VOLUME ["/opt/drive"]
 WORKDIR /opt/drive
 
-CMD [ /bin/drive --help ]
+CMD [ "/bin/drive", "--help" ]
