@@ -10,9 +10,9 @@ RUN go get -u github.com/odeke-em/drive/cmd/drive
 
 RUN apk --no-progress del build-deps
 
-RUN mkdir -p /opt/drive
+RUN mkdir -p /opt/drive && rm -rf /src /pkg
 
 VOLUME ["/opt/drive"]
 WORKDIR /opt/drive
 
-CMD [ "/bin/drive", "--help" ]
+CMD [ "/bin/drive" ]
