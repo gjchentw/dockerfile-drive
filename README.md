@@ -1,4 +1,4 @@
-# <a href="https://hub.docker.com/r/gjchen/drive/" target="_blank">gjchen/drive</a>
+# gjchen/drive@Dockerhub
 
 * run for uid 1000, shows usage:
 ```
