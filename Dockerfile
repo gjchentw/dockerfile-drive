@@ -1,5 +1,5 @@
 FROM alpine:edge
-MAINTAINER gjchen <freak@funp.com>
+MAINTAINER gjchen <gjchen.tw@gmail.com>
 
 ENV GOPATH /
 RUN apk --no-cache --no-progress upgrade -f && \
