@@ -1,14 +1,14 @@
-FROM alpine:edge
-MAINTAINER gjchen <gjchen.tw@gmail.com>
+FROM ghcr.io/gjchentw/alpine:edge
 
-ENV GOPATH /
+ENV GOPATH /tmp/go
+
 RUN apk --no-cache --no-progress upgrade -f && \
     apk --no-cache --no-progress add ca-certificates bash && \
     apk --no-cache --no-progress add --virtual build-deps git mercurial go gcc musl-dev && \
+    mkdir -p /tmp/go /opt/drive && \
     go get -u github.com/odeke-em/drive/cmd/drive && \
     apk --no-progress del build-deps && \
-    mkdir -p /opt/drive && \
-    rm -rf /src /pkg
+    rm -rf /tmp/go
 
 VOLUME ["/opt/drive"]
 WORKDIR /opt/drive
