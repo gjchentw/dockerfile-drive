@@ -14,4 +14,4 @@ RUN apk --no-cache --no-progress upgrade -f && \
 VOLUME ["/opt/drive"]
 WORKDIR /opt/drive
 
-CMD [ "/bin/drive" ]
+CMD [ "/usr/bin/drive" ]
